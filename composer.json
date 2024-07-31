@@ -49,6 +49,6 @@
     },
     "license": "MIT",
     "bin": [
-        "buscador-cursos.php"
+        "buscar-cursos.php"
     ]
 }
