@@ -9,7 +9,6 @@ class Buscador
 {
     private $httpClient;
     private $crawler;
-    
     public function __construct(ClientInterface $httpClient, Crawler $crawler)
     {
         $this->httpClient = $httpClient;

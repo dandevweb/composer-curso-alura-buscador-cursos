@@ -22,6 +22,29 @@
         "symfony/css-selector": "^7.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11"
+        "phpunit/phpunit": "^11",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "^5.4"
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit tests/TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Executa os testes",
+        "cs": "Verifica se o código está de acordo com o padrão PSR12",
+        "phan": "Verifica se o código está de acordo com o padrão PSR12",
+        "check": "Executa todos os checks"
     }
 }
