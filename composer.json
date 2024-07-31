@@ -46,5 +46,9 @@
         "cs": "Verifica se o código está de acordo com o padrão PSR12",
         "phan": "Verifica se o código está de acordo com o padrão PSR12",
         "check": "Executa todos os checks"
-    }
+    },
+    "license": "MIT",
+    "bin": [
+        "buscador-cursos.php"
+    ]
 }
